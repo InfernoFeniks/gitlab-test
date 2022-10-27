@@ -1,16 +1,16 @@
 stages:
-   - test
-   - build
+   - work
 
-paralell:
-  test:
+test:
+  work:
     stage: test
     image: golang:1.13
     script: 
      - go mod init feniks
      - go test .
 
-  build:
+build:
+  work:
     stage: build
     image: docker:latest
     script:
