@@ -1,5 +1,12 @@
 stages:
+   - test
    - build
+
+test:
+  stage: test
+  image: golang:1.13
+  script: 
+   - go test .
 
 build:
   stage: build
