@@ -10,7 +10,7 @@ test:
     rules:
       - if: $CI_PIPELINE_SOURCE == "merge_request_event"
         changes:
-          - *.go
+          - '*.go'
 
 
 build:
