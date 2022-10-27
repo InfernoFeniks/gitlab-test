@@ -7,9 +7,7 @@ test:
     script: 
      - go mod init feniks
      - go test .
-    rules:
-      changes:
-       - *.go
+
 build:
     stage: work
     image: docker:latest
