@@ -2,19 +2,19 @@ stages:
    - test
    - build
 
-    stage: test
-    image: golang:1.13
-    script: 
-     - go mod init feniks
-     - go test .
-    rules:
-      - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-        changes:
-          - '*.go'
+stage: test
+  image: golang:1.13
+  script: 
+   - go mod init feniks
+   - go test .
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      changes:
+        - '*.go'
 
 
-    stage: build
-    image: docker:latest
-    script:
-     - docker build .
+stage: build
+  image: docker:latest
+  script:
+   - docker build .
 
