@@ -1,12 +1,6 @@
 stages:
-#  - test
-  - build
 
-test:
-  stage: test
-  image: golang:1.17
-  script: 
-   - /usr/local/go/bin/go test .
+  - build
 
 build:
   stage: build
