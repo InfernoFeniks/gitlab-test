@@ -2,9 +2,10 @@ stages:
    - test
    - build
 
-stage: test
+test:
+  stage: test
   image: golang:1.13
-  script: 
+  script:
    - go mod init feniks
    - go test .
   rules:
@@ -13,8 +14,8 @@ stage: test
         - '*.go'
 
 
-stage: build
+build:
+  stage: build
   image: docker:latest
   script:
    - docker build .
-
