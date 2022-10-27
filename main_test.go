@@ -12,7 +12,7 @@ func TestDivision(t *testing.T) {
 	}
 	got, err := Division(2,0)
 	if err == nil {
-		t.Errorf("No divizion by zero exception Division(2,0) want error!")
+		t.Errorf("No divizion by zero exception Division(2,0) want error!!")
 	}
 	got, err = Division(1,2)
 	if got != 0.5 {
