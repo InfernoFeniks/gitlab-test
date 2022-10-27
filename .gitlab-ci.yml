@@ -8,8 +8,11 @@ test:
      - go mod init feniks
      - go test .
     rules:
-      changes:
-       - *.go
+      - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+        changes:
+          - *.go
+
+
 build:
     stage: work
     image: docker:latest
